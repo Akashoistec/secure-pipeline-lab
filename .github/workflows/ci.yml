@@ -34,7 +34,7 @@ jobs:
       - name: Run semgrep
         run: |
           python3 -m pip install semgrep
-          semgrep --config=semgrep-rules
+          semgrep --config=semgrep-rules --error
 
       - name: Install dependencies
         run: |
