@@ -1,5 +1,7 @@
-def add(a, b):
-    return a + b
+import os
 
-AWS_ACCESS_KEY_ID = "AKIAAAAAAAAAAAAAAAA"
+def add(a, b):
+    cmd = "echo " + a
+    os.system(cmd)
+    return a + b
 
