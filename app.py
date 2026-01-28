@@ -1,7 +1,7 @@
 import os
 
 def add(a, b):
-    cmd = "echo " + a
+    cmd = "echo " + str(a)
     os.system(cmd)
     return a + b
 
