@@ -8,15 +8,12 @@ on:
 
 jobs:
   steps:
-    - name: Run gitleaks
-      uses: gitleaks/gitleaks-action@v2
-      with:
-        args: detect --baseline-path baseline.json
 
   main_test:
     runs-on: ubuntu-latest
 
     steps:
+
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -24,6 +21,11 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+
+      - name: Run gitleaks
+        uses: gitleaks/gitleaks-action@v2
+        with:
+          args: detect --baseline-path baseline.json
 
       - name: Install dependencies
         run: |
