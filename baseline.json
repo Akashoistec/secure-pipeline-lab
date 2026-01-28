@@ -1,0 +1,42 @@
+[
+ {
+  "Description": "Identified a pattern that may indicate AWS credentials, risking unauthorized cloud resource access and data breaches on AWS platforms.",
+  "StartLine": 2,
+  "EndLine": 2,
+  "StartColumn": 22,
+  "EndColumn": 41,
+  "Match": "AKIAZZZZZZZZZZZZZZZZ",
+  "Secret": "AKIAZZZZZZZZZZZZZZZZ",
+  "File": "dp.py",
+  "SymlinkFile": "",
+  "Commit": "788221d6b22dd5d78183c864095ed0386899527d",
+  "Entropy": 1.0219281,
+  "Author": "Akash Patel",
+  "Email": "akash.oistec@gmail.com",
+  "Date": "2026-01-28T15:38:55Z",
+  "Message": "add onther AWS key (intentional leak)",
+  "Tags": [],
+  "RuleID": "aws-access-token",
+  "Fingerprint": "788221d6b22dd5d78183c864095ed0386899527d:dp.py:aws-access-token:2"
+ },
+ {
+  "Description": "Identified a pattern that may indicate AWS credentials, risking unauthorized cloud resource access and data breaches on AWS platforms.",
+  "StartLine": 1,
+  "EndLine": 1,
+  "StartColumn": 22,
+  "EndColumn": 41,
+  "Match": "AKIAIOSFODNN7EXAMPLE",
+  "Secret": "AKIAIOSFODNN7EXAMPLE",
+  "File": "config.py",
+  "SymlinkFile": "",
+  "Commit": "fe9b3beac0e9aedef945fb83195884933a7228a9",
+  "Entropy": 3.6841838,
+  "Author": "Akash Patel",
+  "Email": "akash.oistec@gmail.com",
+  "Date": "2026-01-28T15:19:56Z",
+  "Message": "Add config with credentials (intentional mistake)",
+  "Tags": [],
+  "RuleID": "aws-access-token",
+  "Fingerprint": "fe9b3beac0e9aedef945fb83195884933a7228a9:config.py:aws-access-token:1"
+ }
+]
