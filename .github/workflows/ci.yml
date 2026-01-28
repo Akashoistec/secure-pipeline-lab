@@ -31,6 +31,11 @@ jobs:
         run: |
           gitleaks detect --baseline-path baseline.json
 
+      - name: Run semgrep
+        run: |
+          pythonm3 -m pip install semgrep
+          semgrep --config=semgrep-rules
+
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip

@@ -1,0 +1,7 @@
+rules:
+  - id: no-os-system
+    patterns:
+      - pattern: os.system(...)
+    message: "Do not use os.system(); use safer alternatives."
+    languages: [python]
+    severity: ERROR
