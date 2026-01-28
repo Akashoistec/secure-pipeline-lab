@@ -20,10 +20,15 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: install gitleaks
+        run: |
+          curl -sSL https://github.com/gitleaks/gitleaks/releases/latest/download/gitleaks-linux-amd64 -o gitleaks
+          chmod +x gitleaks
+          sudo mv gitleaks /usr/local/bin/gitleaks
+
       - name: Run gitleaks
-        uses: gitleaks/gitleaks-action@v2
-        with:
-          args: detect --baseline-path baseline.json
+        run: |
+          gitleaks detect --baseline-path baseline.json
 
       - name: Install dependencies
         run: |
